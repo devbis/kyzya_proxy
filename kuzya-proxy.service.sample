@@ -1,0 +1,12 @@
+[Unit]
+Description=Kuzya proxy
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/kuzya_proxy/
+ExecStart=gunicorn kuzya_proxy:web_app --bind localhost:9292 --worker-class aiohttp.worker.GunicornWebWorker
+
+[Install]
+WantedBy=multi-user.target

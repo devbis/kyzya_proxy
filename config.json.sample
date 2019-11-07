@@ -1,0 +1,14 @@
+{
+    "config" : [
+        {
+            "path": "api/token_or_name/device/device_value/",
+            "url": "https://api.thingspeak.com/channels/12345/fields/1.json?results=1",
+            "jsonpath": "$.feeds[0].field1"
+        },
+        {
+            "path": "api/elon-mask/tesla/speed/",
+            "url": "https://api.thingspeak.com/channels/12346/fields/2.json?results=1",
+            "jsonpath": "$.feeds[0].field2"
+        }
+    ]
+}
